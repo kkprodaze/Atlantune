@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Artist Dashboard — Atlantune</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body data-page="artist">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Atlantune</a>
+      <nav class="nav-links">
+        <span id="welcomeName" class="muted"></span>
+        <a href="login.html" id="logoutBtn" class="btn btn-ghost">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container dash">
+    <div class="grid-3">
+      <div class="kpi">
+        <div class="kpi-label">Monthly streams</div>
+        <div class="kpi-num" id="kpiStreams">0</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Earnings</div>
+        <div class="kpi-num">$0.00</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Active releases</div>
+        <div class="kpi-num" id="kpiReleases">0</div>
+      </div>
+    </div>
+
+    <section class="card upload">
+      <div class="upload-head">
+        <h2>Upload a track</h2>
+        <p class="muted">MP3/WAV, cover 3000×3000 JPG/PNG.</p>
+      </div>
+
+      <div class="dropzone" id="dropArtist">
+        <input type="file" id="fileArtist" hidden>
+        <p>Drag & drop files here or <button class="link" id="pickArtist">browse</button></p>
+      </div>
+
+      <form class="form grid-2">
+        <label class="field">
+          <span>Track title</span>
+          <input type="text" id="titleArtist" placeholder="Song name">
+        </label>
+        <label class="field">
+          <span>Genre</span>
+          <input type="text" id="genreArtist" placeholder="Hip-Hop">
+        </label>
+        <label class="field full">
+          <span>Description</span>
+          <textarea id="descArtist" rows="3" placeholder="Optional notes…"></textarea>
+        </label>
+      </form>
+
+      <div class="progress" id="progressArtist"><span></span></div>
+      <button class="btn btn-primary" id="uploadArtist">Upload</button>
+    </section>
+
+    <section class="card">
+      <h2>Your releases</h2>
+      <div id="releaseListArtist" class="list-empty">No releases yet.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>&copy; 2025 Atlantune</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

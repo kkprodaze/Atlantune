@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Label Dashboard — Atlantune</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body data-page="label">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Atlantune</a>
+      <nav class="nav-links">
+        <span id="welcomeName" class="muted"></span>
+        <a href="login.html" id="logoutBtn" class="btn btn-ghost">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container dash">
+    <div class="grid-3">
+      <div class="kpi">
+        <div class="kpi-label">Total streams</div>
+        <div class="kpi-num" id="kpiStreams">0</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Payouts pending</div>
+        <div class="kpi-num">$0.00</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Managed artists</div>
+        <div class="kpi-num" id="kpiArtists">2</div>
+      </div>
+    </div>
+
+    <section class="card upload">
+      <div class="upload-head">
+        <h2>Upload for an artist</h2>
+      </div>
+
+      <div class="grid-2">
+        <label class="field">
+          <span>Artist</span>
+          <select id="artistSelect">
+            <option value="Aqua Nova">Aqua Nova</option>
+            <option value="Skyline Kid">Skyline Kid</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Track title</span>
+          <input type="text" id="titleLabel" placeholder="Song name">
+        </label>
+      </div>
+
+      <div class="dropzone" id="dropLabel">
+        <input type="file" id="fileLabel" hidden>
+        <p>Drag & drop files here or <button class="link" id="pickLabel">browse</button></p>
+      </div>
+
+      <div class="progress" id="progressLabel"><span></span></div>
+      <button class="btn btn-primary" id="uploadLabel">Upload</button>
+    </section>
+
+    <section class="card">
+      <h2>Catalog</h2>
+      <div id="releaseListLabel" class="list-empty">No releases yet.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>&copy; 2025 Atlantune</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

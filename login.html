@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login — Atlantune</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body data-page="auth">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Atlantune</a>
+    </div>
+  </header>
+
+  <main class="container auth-wrap">
+    <div class="auth-card">
+      <h1>Welcome back</h1>
+      <p class="muted">Choose your role and sign in to continue.</p>
+
+      <form id="loginForm" class="form">
+        <div class="grid-2">
+          <label class="radio">
+            <input type="radio" name="role" value="artist" checked>
+            <span>Artist</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="role" value="label">
+            <span>Label</span>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <input type="password" name="password" required placeholder="••••••••">
+        </label>
+
+        <label class="chk">
+          <input type="checkbox" name="subscribe">
+          Send me news & updates
+        </label>
+
+        <button type="submit" class="btn btn-primary w-100">Continue</button>
+
+        <button type="button" id="googleBtn" class="btn btn-ghost w-100">Continue with Google</button>
+      </form>
+
+      <div class="auth-note">This is a prototype login (no real auth yet).</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>&copy; 2025 Atlantune</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

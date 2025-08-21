@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlantune — Simple Music Distribution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="home">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Atlantune</a>
+      <nav class="nav-links">
+        <a href="login.html" class="btn btn-outline">Log in</a>
+        <a href="login.html" class="btn btn-primary">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Distribute your music. <span class="accent">Faster.</span></h1>
+        <p>Upload once. We handle delivery, reports, and payouts. Clean dashboards for Artists and Labels.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="login.html">Start free prototype</a>
+          <a class="btn btn-ghost" href="#features">See features</a>
+        </div>
+        <div class="hero-badges">
+          <span>⚡ 1-click upload</span>
+          <span>📊 Real-time mock stats</span>
+          <span>💳 Subscriptions ready</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat">
+          <div class="stat-num">1,248</div>
+          <div class="stat-label">Monthly uploads</div>
+        </div>
+        <div class="chart-spark"></div>
+        <div class="card-note">Demo data — wire-ready UI</div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon">⏱️</div>
+          <h3>Fast uploads</h3>
+          <p>Drag & drop audio, auto-fill release fields, instant validation UI.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📦</div>
+          <h3>Smart packaging</h3>
+          <p>ISRC placeholders, cover checks, clean metadata preview before submit.</p>
+        </div>
+        <div class="card">
+          <div class="icon">💸</div>
+          <h3>Transparent payouts</h3>
+          <p>Clear earnings mock reports — ready to connect Stripe later.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing container">
+      <h2>Simple pricing</h2>
+      <div class="pricing-cards">
+        <div class="price-card">
+          <div class="price-tier">Artist</div>
+          <div class="price-num">$9<span>/mo</span></div>
+          <ul>
+            <li>Unlimited releases</li>
+            <li>Basic analytics</li>
+            <li>Email support</li>
+          </ul>
+          <a href="login.html" class="btn btn-primary w-100">Choose Artist</a>
+        </div>
+        <div class="price-card price-card--pro">
+          <div class="price-tier">Label</div>
+          <div class="price-num">$29<span>/mo</span></div>
+          <ul>
+            <li>Up to 50 artists</li>
+            <li>Split royalties mock</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="login.html" class="btn btn-dark w-100">Choose Label</a>
+        </div>
+      </div>
+      <p class="muted t-center">Numbers are placeholders — connect real billing later.</p>
+    </section>
+
+    <section class="subscribe container">
+      <h2>Stay in the loop</h2>
+      <form id="subscribeForm" class="subscribe-form">
+        <input type="email" placeholder="Your email" required />
+        <label class="chk">
+          <input type="checkbox" name="updates" />
+          Send me news & feature updates
+        </label>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <div class="form-note" id="subscribeNote"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>&copy; 2025 Atlantune</div>
+      <div class="footer-links">
+        <a href="login.html">Login</a>
+        <a href="#features">Features</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
