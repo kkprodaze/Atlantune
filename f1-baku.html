@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>F1 Baku Street Challenge — Atlantune Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="game">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Atlantune</a>
+      <nav class="nav-links">
+        <a href="index.html" class="btn btn-ghost">Home</a>
+        <a href="login.html" class="btn btn-outline">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container game-main">
+    <div class="game-head">
+      <div>
+        <h1>F1 Baku Street Challenge</h1>
+        <p class="muted">Sprint through the seaside streets of Baku, master the tight castle section, and beat the rival car over three laps.</p>
+      </div>
+      <div class="game-meta">
+        <span>🏁 3 Laps</span>
+        <span>⚙️ Simulation-lite handling</span>
+        <span>🌃 Inspired by Baku City Circuit</span>
+      </div>
+    </div>
+
+    <div class="game-layout">
+      <aside class="game-panel">
+        <div class="hud">
+          <div class="hud-row"><span class="hud-label">Laps</span><span id="lapInfo">0 / 3</span></div>
+          <div class="hud-row"><span class="hud-label">Current lap</span><span id="lapTimer">0.000s</span></div>
+          <div class="hud-row"><span class="hud-label">Best lap</span><span id="bestLap">—</span></div>
+          <div class="hud-row"><span class="hud-label">Rival pace</span><span id="rivalLap">—</span></div>
+        </div>
+        <button class="btn btn-primary w-100" id="startBtn">Start race</button>
+        <div class="countdown" id="countdown"></div>
+        <div class="race-message" id="raceMessage">Press start to launch the countdown.</div>
+        <div class="instructions">
+          <h2>Controls</h2>
+          <ul>
+            <li><strong>W / ↑</strong> — throttle</li>
+            <li><strong>S / ↓</strong> — brake & reverse</li>
+            <li><strong>A / ←</strong> — steer left</li>
+            <li><strong>D / →</strong> — steer right</li>
+            <li><strong>Space</strong> — quick reset to the racing line</li>
+          </ul>
+          <p class="muted small">Stay on the tarmac — going off the racing surface slows you down and triggers a time penalty.</p>
+        </div>
+      </aside>
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="960" height="600"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>&copy; 2025 Atlantune Labs</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/f1-baku.js" defer></script>
+</body>
+</html>
